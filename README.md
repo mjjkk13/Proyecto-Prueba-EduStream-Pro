@@ -89,6 +89,6 @@ Esto levantará:
 
 👩‍💻 Autor
 
-Proyecto de entrenamiento realizado por **Mariana Jiménez Villa**
+Proyecto de entrenamiento realizado por **Mariana Jiménez Villa**<br>
 Competencia Senasoft 2025 – Mujeres Digitales
 
