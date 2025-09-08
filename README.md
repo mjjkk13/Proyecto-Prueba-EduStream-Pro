@@ -45,8 +45,8 @@ El reto consiste en construir una **plataforma de streaming educativo tipo Netfl
 
 ## 📂 Estructura del Proyecto  
 
-/backend -> API Laravel (cursos, usuarios, lecciones)
-/frontend -> Interfaz en React (catálogo, dashboard)
+/backend -> API Laravel (cursos, usuarios, lecciones)<br>
+/frontend -> Interfaz en React (catálogo, dashboard)<br>
 /docker -> Archivos de configuración para orquestación
 
 
