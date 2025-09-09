@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: edustream-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: toor
+      POSTGRES_DB: edustream
+      TZ: America/Bogota
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d  # aquí pones tus scripts .sql
+    ports:
+      - "5432:5432"  # Agregar puerto para acceso directo a PostgreSQL
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: edustream-pgadmin
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@edustream.local
+      PGADMIN_DEFAULT_PASSWORD: AdminSegura
+      TZ: America/Bogota
+    ports:
+      - "5050:80"   # accede con http://localhost:5050
+
+volumes:
+  pgdata:
